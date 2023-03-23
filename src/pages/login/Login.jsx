@@ -102,12 +102,6 @@ const Login = () => {
   }, [navigate]);
   return (
     <div className="body">
-      <h1 id="site-logo">
-        <img
-          src="https://fuidentity.edunext.vn/images/logo-login-new.png"
-          alt="f-home"
-        />
-      </h1>
       <div id="wrap-main-content">
         <div class="identity-tabs">
           <a href="/vi/Account/Login">
@@ -119,36 +113,6 @@ const Login = () => {
             <GoogleButton className="googleButton" onClick={handleGoogleSignIn}/>
           </li>
         </ul>
-        <div class="wrap-form-field">
-          <div class="form-group group-width-icon">
-            <i class="fa-solid fa-user"></i>
-            <input
-              type="email"
-              class="form-control input-validation-error"
-              placeholder="Email"
-              autocomplete="off"
-              data-val="true"
-              data-val-required="Password is required"
-              id="Password"
-              name="Password"
-            />
-          </div>
-        </div>
-        <div class="wrap-form-field">
-          <div class="form-group group-width-icon">
-          <i class="fa-solid fa-lock"></i>
-            <input
-              type="password"
-              class="form-control input-validation-error"
-              placeholder="Password"
-              autocomplete="off"
-              data-val="true"
-              data-val-required="Password is required"
-              id="Password"
-              name="Password"
-            />
-          </div>
-        </div>
         <div class="d-grid form-identify">
           <button class="btn btn-primary" type="button">
             Log in
