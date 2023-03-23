@@ -7,6 +7,8 @@ import { auth } from "../../components/context/firebase";
 import { DataContext } from "../DataContext";
 import toastr from "cogo-toast";
 import axios from "axios";
+import clientId from "./client_secret_624291541261-vsnpuqvrn48tah5ju43l048ug23a3hre.apps.googleusercontent.com.json";
+
 const Login = () => {
   const { googleSignIn, user, accessToken } = useContext(DataContext);
   const [isLoading, setIsLoading] = useState(false);
@@ -110,7 +112,9 @@ const Login = () => {
         </div>
         <ul className="list-social-login">
           <li className="social-login-item">
-            <GoogleButton className="googleButton" onClick={handleGoogleSignIn}/>
+            <GoogleButton className="googleButton" onClick={handleGoogleSignIn}
+              data-clientid={clientId.web.client_id}
+              />
           </li>
         </ul>
         <div class="d-grid form-identify">
